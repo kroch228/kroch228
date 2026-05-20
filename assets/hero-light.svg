@@ -35,7 +35,7 @@
   <rect x="160" y="326" width="120" height="14" fill="#e5e7eb" rx="2"/>
   <rect x="160" y="326" width="60" height="14" fill="#f59e0b" rx="2" opacity="0.85"/>
 
-  <text x="48" y="390" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" fill="#9ca3af">▸ 4 repos</text>
+  <text x="48" y="390" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" fill="#9ca3af">▸ 13 contributions   ▸ 4 repos</text>
 
   <text x="48" y="412" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="9" fill="#9ca3af" letter-spacing="0.5">auto-generated · updated nightly</text>
 </svg>
