@@ -68,3 +68,34 @@
 5. **Theme consistency** matters — pick one palette (e.g., Tokyo Night, Dracula, Monokai) and apply across all cards.
 6. **Interactive elements** (chess, connect4) are impressive but high-maintenance and niche.
 7. **Actions-generated content** (snake, 3D, metrics) keeps the profile alive without manual updates.
+
+---
+
+## Round 2 — Premium Tier
+
+Profiles and tools that go beyond badge-assembly into art/design territory.
+
+| # | Source | Why it's premium |
+|---|--------|-----------------|
+| 1 | [natemoo-re/natemoo-re](https://github.com/natemoo-re/natemoo-re) | Custom Vercel endpoint renders live Spotify SVG cards on-the-fly — no third-party widget, full visual control |
+| 2 | [orhun/orhun](https://github.com/orhun/orhun) | Ratatui-themed spinning terminal GIF with dark/light swap via `#gh-dark-mode-only`; prose stats instead of cards |
+| 3 | [sindresorhus/sindresorhus](https://github.com/sindresorhus/sindresorhus) | Intentional GeoCities kitsch — retro GIFs, badge strip, under-construction banner; anti-pattern as art |
+| 4 | [lowlighter/metrics — terminal template](https://github.com/lowlighter/metrics) | Full infographic engine with `terminal` template that renders stats as a fake shell session |
+| 5 | [Raymo111/Raymo111](https://github.com/Raymo111/Raymo111) | TypeIt + Vue animated hero, Unicode monospace body text, lowlighter/metrics full-page render |
+| 6 | [maximousblk/maximousblk](https://github.com/maximousblk/maximousblk) | Go-template-driven README auto-refreshes 9 live feeds; minimalist text-only aesthetic |
+| 7 | [MartinHeinz/MartinHeinz](https://github.com/MartinHeinz/MartinHeinz) | Palette discipline — forces shields.io + stats cards into one dark+mint scheme; looks like a designed dashboard |
+| 8 | [rednafi/rednafi](https://github.com/rednafi/rednafi) | One-liner bio + auto-generated blog table via Go Action; radical restraint as design statement |
+| 9 | [f/f](https://github.com/f/f) | `npx fka` — executable README that renders in the viewer's terminal; the profile IS the CLI |
+| 10 | [jh3y/jh3y](https://github.com/jh3y/jh3y) | Single hand-crafted SVG banner does all visual work; extreme minimalism |
+| 11 | [capsule-render `type=transparent`](https://github.com/kyechan99/capsule-render) | Transparent overlay mode allows layering text on repo's social preview image |
+| 12 | [lowlighter/metrics `skyline` plugin](https://github.com/lowlighter/metrics) | 3D city/skyline render of contributions — most visually dense single SVG available |
+
+### Premium-tier patterns observed
+
+1. **Custom serverless SVG endpoint** (Vercel/Deno) — full control over typography, color, data. The profile becomes a live app.
+2. **Theme-aware asset swapping** — `#gh-dark-mode-only` / `#gh-light-mode-only` anchors for separate dark/light visuals.
+3. **Palette discipline over badge count** — one accent color forced across all external services creates cohesion.
+4. **Radical restraint** — fewer elements, each hand-picked, reads as intentional design vs. template assembly.
+5. **Terminal-as-aesthetic** — lowlighter/metrics `terminal` template or hand-crafted monospace SVG; signals "I live in the CLI."
+6. **Generative/live data** — Spotify, blog RSS, commit summaries rendered as custom SVG; the profile has a pulse.
+7. **Single hero visual** — one stunning animated SVG/GIF carries the entire page; everything else is supporting text.
