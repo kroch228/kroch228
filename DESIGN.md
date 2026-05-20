@@ -479,3 +479,27 @@ Runner-up: Direction D ("Terminal Session") if the user prefers the hacker/CLI i
 ---
 
 ### >>> This is the FINAL synthesized direction. Not A, B, C, D, E, or F — it's "Forge": the best atomic tricks assembled into one cohesive profile.
+
+---
+
+## Round 3 — FINAL: Shipped Composite
+
+**Codename:** Forge
+**Shipped:** 2026-05-20
+**Commit:** c2411af "final composite profile readme"
+
+**Formula:** Custom generative SVG poster (Swiss typography, dark/light, SMIL pulse) → terminal bio block → palette-disciplined stats row → snake animation → bilingual CTA + 3 badges.
+
+**Included tricks (8):**
+1. Generative SVG via Action (#29) — `generator/index.js`
+2. Swiss-design typographic poster (#28) — Inter font, grid lines, accent bar
+3. SMIL animate pulse (#35) — accent bar opacity animation
+4. Dark/light mode swap (#7) — `<picture>` element with `prefers-color-scheme`
+5. Monospace/terminal bio (#27) — code block with `>` prefixes
+6. Palette discipline (#26) — #2563eb across hero, stats, badges
+7. Snake eats contributions (#8) — Platane/snk dark/light variants
+8. GitHub stats card themed (#12) — stats + top-langs, 0d1117 bg, 2563eb accent
+
+**Cohesion:** Visual hierarchy top→bottom (poster→bio→stats→snake), rationed motion (2 elements only), locked single-accent palette, layered identity (designer + coder + contributor + freelancer).
+
+**Workflow:** Single `.github/workflows/profile.yml` — 2 jobs (hero + snake), daily cron 03:00 UTC + workflow_dispatch.
