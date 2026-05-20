@@ -506,7 +506,112 @@ Runner-up: Direction D ("Terminal Session") if the user prefers the hacker/CLI i
 
 ---
 
-## Round 4 — Max-Beauty Pass
+## Round 4 — Own Vision: "Foundry"
+
+### Metaphor
+
+Alexander's profile is a **foundry** — a dark workshop where raw commits are smelted into shipped products. Molten amber light (#f59e0b) glows against dark steel (#0f1419). The hero SVG is an anvil-shaped data panel where contribution stats glow like heated metal. Everything signals: "I take raw ideas and forge them into working software."
+
+### Tone of Voice
+
+Industrial-warm. Not cold-corporate, not playful-kawaii. The voice of a craftsman who works with fire — confident, direct, slightly poetic. Monospace text reads like forge logs. The amber accent is the only color — everything else is steel-grey or near-black.
+
+### Palette
+
+| Token | Hex | Role |
+|-------|-----|------|
+| amber (accent) | #f59e0b | All highlights, bars, links, badge bg |
+| ember (glow) | #fbbf24 | SMIL animation glow state |
+| steel-dark (bg) | #0f1419 | Hero bg (dark mode) |
+| steel-light (bg) | #f8f9fa | Hero bg (light mode) |
+| text-primary-dark | #e6edf3 | Main text on dark |
+| text-primary-light | #1c1917 | Main text on light |
+| text-muted-dark | #6b7280 | Secondary text on dark |
+| text-muted-light | #6b7280 | Secondary text on light |
+| grid-dark | #1e2530 | Geometric lines on dark |
+| grid-light | #e5e7eb | Geometric lines on light |
+
+### Tricks (7 elements)
+
+| # | Trick | Source | Role in Foundry |
+|---|-------|--------|-----------------|
+| 1 | Generative SVG via Action (#29) | TRICKS.md:43, articles-x.md:§9 | Hero — anvil-shaped data panel with live stats, generated nightly |
+| 2 | SMIL animate glow (#35) | TRICKS.md:49 | Amber accent bar pulses like cooling metal |
+| 3 | Dark/light mode swap (#7) | TRICKS.md:21, youtube.md:4 | Two hero variants — dark forge / light blueprint |
+| 4 | Monospace/terminal aesthetic (#27) | TRICKS.md:41 | Bio as "forge log" — monospace with `▸` prefixes |
+| 5 | Palette discipline (#26) | TRICKS.md:39 | Single amber accent across all elements |
+| 6 | Snake eats contributions (#8) | TRICKS.md:22, youtube.md:3 | Closing kinetic element — amber-tinted via custom palette |
+| 7 | GitHub stats card themed (#12) | TRICKS.md:26, youtube.md:7 | Stats row — transparent bg, amber accent, no border |
+
+### What changed from Forge
+
+| Forge element | Foundry decision | Why |
+|---|---|---|
+| Swiss-poster (#2563eb blue) | → Industrial amber (#f59e0b) | Blue is safe/corporate. Amber is distinctive — signals craft, warmth, fire. Fewer profiles use warm palettes. |
+| Inter font, Bauhaus grid | → Monospace (JetBrains Mono feel), industrial grid | Reinforces "workshop" metaphor. More aligned with terminal-native developer identity. |
+| "DEVELOPER × AI" subtitle | → "forging software with AI" | Active verb, not passive label. Matches the foundry metaphor. |
+| Contribution count as small text | → "Heat bars" — visual bars showing language distribution | Data as visual element, not just numbers. Bars look like glowing ingots. |
+| Static description lines | → Shorter, punchier — 2 lines max | Forge doesn't explain. It shows. |
+
+### Why it fits Alexander
+
+1. **Java + Minecraft plugins** — Minecraft itself has a crafting/smelting system. The foundry metaphor resonates with his primary audience.
+2. **AI-in-the-loop** — "forging with AI" positions AI as a tool in the workshop, not the product itself.
+3. **Kwork freelancer** — amber/gold signals premium craft. Dark background = professional, not playful.
+4. **"Questions first, code second"** — the forge log bio format naturally reads as a process: input → output.
+
+### Layout Mock
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│  ┌───────────────────────────────────────────────────────────┐  │
+│  │  [HERO SVG — dark steel / light blueprint via <picture>]  │  │
+│  │                                                           │  │
+│  │   ▌ A L E X A N D E R                                    │  │
+│  │   ▌ forging software with AI                             │  │
+│  │                                                           │  │
+│  │   ━━━━━━━━ (amber bar, pulsing glow)                     │  │
+│  │                                                           │  │
+│  │   Turnkey delivery: plugins · bots · APIs · LLM          │  │
+│  │   Questions first. Code second. 2-3× faster.             │  │
+│  │                                                           │  │
+│  │   ████░░ Java    ███░░░ Python   ██░░░░ TypeScript       │  │
+│  │                                                           │  │
+│  │   ▸ 142 contributions  ▸ 12 repos  ▸ 3 stars            │  │
+│  │                                                           │  │
+│  │                    — updated nightly —                    │  │
+│  └───────────────────────────────────────────────────────────┘  │
+│                                                                 │
+│  ```                                                            │
+│  ▸ stack    Java · Python · TypeScript · PHP · SQL              │
+│  ▸ builds   Minecraft plugins · TG/Discord bots · REST APIs    │
+│  ▸ ai       OpenAI / Claude — embeddings, agents, tool-use     │
+│  ▸ mode     questions → architecture → code → ship             │
+│  ```                                                            │
+│                                                                 │
+│  ┌──────────────────────┐  ┌─────────────────────────────────┐  │
+│  │  GitHub Stats Card   │  │  Top Languages (compact)        │  │
+│  │  (amber on dark)     │  │  (amber on dark)               │  │
+│  └──────────────────────┘  └─────────────────────────────────┘  │
+│                                                                 │
+│  ┌───────────────────────────────────────────────────────────┐  │
+│  │  [Snake animation — amber palette, dark/light]            │  │
+│  └───────────────────────────────────────────────────────────┘  │
+│                                                                 │
+│  ```                                                            │
+│  ▸ open to turnkey gigs — plugins, bots, APIs, AI              │
+│  ▸ открыт к проектам под ключ                                  │
+│  ```                                                            │
+│                                                                 │
+│  [ Telegram badge ]  [ Kwork badge ]  [ Email badge ]           │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## ~~Round 4 — Max-Beauty Pass~~ (superseded by "Foundry" above)
 
 > Goal: evaluate 10+ candidates from the R3 research corpus, accept 0–5 that strictly reinforce the Forge aesthetic. Cohesion rule: every new trick MUST satisfy ≥1 of (a) reinforces blue-Swiss #2563eb aesthetic, (b) adds genuine "liveness" via auto-updates, (c) demonstrates Alexander's AI/automation skill.
 
