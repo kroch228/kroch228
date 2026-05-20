@@ -503,3 +503,50 @@ Runner-up: Direction D ("Terminal Session") if the user prefers the hacker/CLI i
 **Cohesion:** Visual hierarchy top→bottom (poster→bio→stats→snake), rationed motion (2 elements only), locked single-accent palette, layered identity (designer + coder + contributor + freelancer).
 
 **Workflow:** Single `.github/workflows/profile.yml` — 2 jobs (hero + snake), daily cron 03:00 UTC + workflow_dispatch.
+
+---
+
+## Round 4 — Max-Beauty Pass
+
+> Goal: evaluate 10+ candidates from the R3 research corpus, accept 0–5 that strictly reinforce the Forge aesthetic. Cohesion rule: every new trick MUST satisfy ≥1 of (a) reinforces blue-Swiss #2563eb aesthetic, (b) adds genuine "liveness" via auto-updates, (c) demonstrates Alexander's AI/automation skill.
+
+### Candidates Evaluated
+
+| # | Candidate | Source | Cohesion Verdict | Accept/Reject | Reason |
+|---|-----------|--------|-----------------|:---:|--------|
+| 1 | Streak Stats (#13) | TRICKS.md:27, youtube.md:7 | (b) liveness — shows current streak | **REJECT** | Adds a 3rd card to the stats row, breaking the balanced 2-column layout. Trophy-style gold/fire icons clash with monochrome Swiss restraint. Visual noise outweighs data value. |
+| 2 | Activity Graph (#15) | TRICKS.md:29, youtube.md:10 | (b) liveness | **REJECT** | Area-fill line chart is visually loud and dashboard-like — antithetical to Swiss-poster minimalism. Competes with snake for "contribution visualization" role already filled. |
+| 3 | Typing SVG (#3) | TRICKS.md:17, youtube.md:1 | (a) can be themed blue | **REJECT** | Introduces a 3rd animated element (hero pulse + snake + typing = too much motion). Conflicts with the static typographic authority of the custom hero SVG. The hero already communicates identity — typing SVG would be redundant text. |
+| 4 | Profile Trophies (#14) | TRICKS.md:28, youtube.md:9 | None | **REJECT** | Gold/silver/bronze trophy icons are inherently multi-color — impossible to force into #2563eb monochrome palette. Adds a "gamification" tone that contradicts Swiss restraint. |
+| 5 | Visitor Counter (#32) | TRICKS.md:46, reddit-hn.md:§tools | (b) liveness | **REJECT** | HN consensus: "mostly just useless clutter." A single badge at the bottom adds no design value and breaks the clean badge trio (Telegram/Kwork/Email). The profile already signals activity via auto-updated hero stats + snake. |
+| 6 | 3D Contribution City (#9) | TRICKS.md:23, articles-x.md:4 | (b) liveness | **REJECT** | Isometric 3D city is visually heavy and colorful — clashes with flat Swiss geometry. Competes directly with snake animation for the "contribution visualization" slot. Two contribution visualizations = redundant. |
+| 7 | Isometric Calendar (#11) | TRICKS.md:25, articles-x.md:3 | (b) liveness | **REJECT** | Same problem as #6 — another contribution visualization alongside snake. Also: lowlighter/metrics SVGs have their own styling that doesn't match the locked palette without heavy CSS override. |
+| 8 | Capsule-Render Header (#1) | TRICKS.md:14, youtube.md:2 | (a) can be themed | **REJECT** | Generic wave/gradient header would REPLACE the custom generative SVG hero — the single most unique element of Forge. Downgrade, not upgrade. |
+| 9 | WakaTime Stats (#16) | TRICKS.md:30, youtube.md:12 | (b) liveness, (c) automation | **SKIP** | Requires WakaTime API key — a user-side credential we don't have. Per constraints: skip unless implementable with public-only data. Cannot implement. |
+| 10 | Spotify Now Playing (#17/#18) | TRICKS.md:31-32, youtube.md:6 | (b) liveness | **SKIP** | Requires Spotify OAuth refresh token — user-side credential. Per constraints: skip. |
+| 11 | Blog Post Auto-Pull (#19) | TRICKS.md:33, articles-x.md:5 | (b) liveness, (c) automation | **REJECT** | Alexander doesn't maintain a blog or RSS feed. No data source to pull from. Would show empty section or require creating content infrastructure outside scope. |
+| 12 | Tech Stack Icons Grid | youtube.md:8, live-profiles.md:§codestackr | (a) can be themed | **REJECT** | Colored devicon SVGs (Java orange, Python blue/yellow, Docker blue) break palette discipline. Monochrome variants exist but look lifeless. The terminal bio block already lists the stack in text — icons would be redundant information in a less controlled visual form. |
+| 13 | Shadcn-Style Badges (shieldcn) | reddit-hn.md:8 | (a) modern aesthetic | **REJECT** | Replaces shields.io badges with shadcn-style ones. Marginal visual improvement — current flat-square badges already match the Swiss-minimal tone. New dependency on a 2026-era project with unknown longevity. Risk > reward. |
+| 14 | npx Business Card (#23) | TRICKS.md:37 | (c) demonstrates skill | **REJECT** | Invisible in the README itself — only works if visitor runs `npx` in their terminal. Zero visual impact on the profile page. Doesn't reinforce any of the 3 cohesion criteria in a way visitors actually see. |
+
+### Decision: 0 new tricks
+
+**Forge is already at its optimal point.** The profile achieves:
+
+1. **Uniqueness** — custom generative SVG hero that no other profile has.
+2. **Liveness** — nightly auto-update of hero stats + daily snake regeneration.
+3. **Cohesion** — single accent color, rationed motion (exactly 2), clear visual hierarchy.
+4. **Identity** — Swiss-poster says "designer who codes," terminal bio says "coder who ships," snake says "active contributor," stats confirm with numbers.
+5. **Restraint** — the most powerful signal in the current ecosystem where badge-soup is the norm.
+
+Every candidate evaluated either:
+- Breaks palette discipline (trophies, 3D city, tech icons, capsule-render)
+- Adds redundant information (activity graph, isometric calendar = another contribution viz)
+- Introduces visual noise that dilutes the Swiss-minimal aesthetic (streak stats, typing SVG)
+- Requires credentials we don't have (WakaTime, Spotify)
+- Has no data source (blog posts)
+- Is invisible to visitors (npx card)
+
+**The strongest argument for adding nothing:** HN's golden rule — "Please just use text and limit yourself to one or two relevant images." Forge uses exactly: 1 hero image, 2 stats cards, 1 snake animation. Adding anything pushes past the threshold where restraint becomes clutter.
+
+**Shipped:** No code changes. Round 4 = documented validation that Forge is complete.
