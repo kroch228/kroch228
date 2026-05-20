@@ -41,5 +41,5 @@
 ```
 
 <p align="center">
-  <a href="https://kwork.ru/user/kroch228"><img src="https://img.shields.io/badge/Kwork-f59e0b?style=flat-square&logo=freelancer&logoColor=white" alt="Kwork" /></a>
+  <a href="https://kwork.ru/user/sacha_ch"><img src="https://img.shields.io/badge/Kwork-f59e0b?style=flat-square&logo=freelancer&logoColor=white" alt="Kwork" /></a>
 </p>
