@@ -39,6 +39,7 @@ jobs:
       - uses: Platane/snk@v3
         with:
           github_user_name: kroch228
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           outputs: |
             assets/snake-dark.svg?palette=github-dark&color_snake=#f59e0b&color_dots=#1e2530,#f59e0b40,#f59e0b80,#f59e0bbf,#f59e0b
             assets/snake-light.svg?palette=github&color_snake=#f59e0b&color_dots=#e5e7eb,#f59e0b40,#f59e0b80,#f59e0bbf,#f59e0b
