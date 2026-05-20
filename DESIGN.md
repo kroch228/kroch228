@@ -365,3 +365,117 @@ Three distinct concepts tailored to Alexander's bio: Java-primary dev, AI-augmen
 3. The poster is data-driven (live contribution stats) so it has a pulse, but presents data as *design* rather than as a dashboard. This hits the "красивее чем всё что было" bar because it's art, not assembly.
 
 Runner-up: Direction D ("Terminal Session") if the user prefers the hacker/CLI identity over the designer/poster identity.
+
+---
+---
+
+## Round 3 — Synthesized Ideal
+
+### Codename: "Forge"
+
+**One-line formula:** A custom generative SVG hero (Swiss-poster typography + live contribution heatmap) sits above a terminal-aesthetic bio block, flanked by dark/light-aware stats in a single disciplined palette, with a snake animation as the closing kinetic element — all auto-refreshed nightly by one GitHub Action.
+
+---
+
+### Included Tricks (8 elements)
+
+| # | Trick (from TRICKS.md) | Role in composition | Why included |
+|---|---|---|---|
+| 1 | **#29 Generative SVG via Action** | Hero visual — top of page, full-width | One-of-a-kind; nobody else has this exact poster. Makes the profile an art piece, not a template. |
+| 2 | **#28 Swiss-design typographic poster** | Visual language of the hero SVG | Inter font, geometric grid, accent bar with SMIL pulse. Signals taste and restraint. |
+| 3 | **#35 SMIL `<animate>` pulse** | Subtle motion in hero SVG | The only animation in the hero — a pulsing accent bar. Draws the eye without being noisy. |
+| 4 | **#7 Dark/light mode asset swap** | Hero has two variants (dark bg / light bg) | Profile looks native in any GitHub theme. Craft detail most skip. |
+| 5 | **#27 Monospace/terminal aesthetic** | Bio section below hero | Code-block bio with `>` prefixed lines. Signals "I live in the terminal" — fits Java/plugin builder identity. |
+| 6 | **#26 Palette discipline** | All stats/badges share one accent color | One blue accent (#2563eb) across hero, stats card, streak, badges. Creates cohesion from disparate services. |
+| 7 | **#8 Snake eats contributions** | Closing kinetic element | The most-shared single visual in the ecosystem. Provides motion at the bottom, balancing the static poster at top. Dark/light variants via `<picture>`. |
+| 8 | **#12 GitHub stats card (themed)** | Single compact stats row | One stats card + top-langs side-by-side. Minimal — just enough data to show activity. Themed to match palette. |
+
+### Why these 8 work together (cohesion argument)
+
+1. **Visual hierarchy is clear:** Hero poster (large, typographic, unique) → terminal bio (medium, text-forward) → stats row (small, data) → snake (wide, kinetic). Eye flows top-to-bottom with decreasing density.
+2. **Motion is rationed:** Only two animated elements (SMIL pulse in hero, snake at bottom). Everything else is static. This makes the motion meaningful, not decorative noise.
+3. **Palette is locked:** One accent color (#2563eb blue) appears in hero bar, stats card icons, badge backgrounds, and snake highlight. Dark backgrounds (#0d1117 GitHub dark / #fafafa light) for hero variants. No color chaos.
+4. **Identity is layered:** The poster says "designer who codes." The terminal bio says "coder who ships." The snake says "active contributor." The stats confirm it with numbers. Each element adds a facet without repeating.
+5. **Maintenance is minimal:** One Action generates hero SVG + snake SVG nightly. Stats/streak are hosted services (zero maintenance). Bio is static text (update when stack changes). Total moving parts: 1 workflow file.
+6. **Nothing is generic:** The hero is custom-generated (unique). The terminal bio is hand-written (personal). The snake is common but earned its place as the best kinetic closer available. Stats cards are common but disciplined theming makes them feel intentional.
+
+---
+
+### Layout Mock
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│  ┌───────────────────────────────────────────────────────────┐  │
+│  │  [HERO SVG — dark variant / light variant via <picture>]  │  │
+│  │                                                           │  │
+│  │   A L E X A N D E R                                       │  │
+│  │   developer × AI                                          │  │
+│  │   ━━━━━━━━ (pulsing accent bar)                           │  │
+│  │                                                           │  │
+│  │   Embedding AI into the dev workflow.                     │  │
+│  │   Turnkey delivery — plugins, bots, APIs, LLM.            │  │
+│  │   Questions first, then code. 2-3× faster.               │  │
+│  │                                                           │  │
+│  │   142 contributions · 4 repos · Python, Rust             │  │
+│  │   Java  Python  TypeScript  PHP  SQL                      │  │
+│  │                                                           │  │
+│  │                    — updated nightly —                     │  │
+│  └───────────────────────────────────────────────────────────┘  │
+│                                                                 │
+│  ```                                                            │
+│  > Stack: Java · Python · TS · PHP · SQL                        │
+│  > Builds: Minecraft plugins · TG/Discord bots · REST APIs      │
+│  > AI: OpenAI / Claude integrations at every stage              │
+│  > Mode: questions → code · no scope creep · 2-3× via AI       │
+│  ```                                                            │
+│                                                                 │
+│  ┌──────────────────────┐  ┌─────────────────────────────────┐  │
+│  │  GitHub Stats Card   │  │  Top Languages (compact)        │  │
+│  │  (themed #2563eb)    │  │  (themed #2563eb)               │  │
+│  └──────────────────────┘  └─────────────────────────────────┘  │
+│                                                                 │
+│  ─────────────────────────────────────────────────────────────  │
+│                                                                 │
+│  ┌───────────────────────────────────────────────────────────┐  │
+│  │  [Snake animation — dark/light via <picture>]             │  │
+│  └───────────────────────────────────────────────────────────┘  │
+│                                                                 │
+│  ```                                                            │
+│  > Open to turnkey gigs — plugins, bots, APIs, AI              │
+│  > Открыт к проектам под ключ                                  │
+│  ```                                                            │
+│                                                                 │
+│  [ Telegram badge ]  [ Kwork badge ]  [ Email badge ]           │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+### Technical Dependencies
+
+| Component | Implementation | Secrets needed |
+|---|---|---|
+| Hero SVG (dark + light) | Node.js script in `generator/`, fetches GitHub API + GraphQL | `GITHUB_TOKEN` (default) |
+| Snake SVG (dark + light) | Platane/snk@v3 Action | `GITHUB_TOKEN` (default) |
+| Stats card + top-langs | anuraghazra/github-readme-stats (hosted) | None |
+| Badges (Telegram, Kwork, Email) | shields.io (hosted) | None |
+| Workflow | Single `.github/workflows/profile.yml` with 2 jobs: generate-poster + generate-snake | — |
+
+---
+
+### Risks & Mitigations
+
+| Risk | Impact | Mitigation |
+|---|---|---|
+| Google Fonts `@import` in SVG may not render on GitHub | Hero text falls back to system sans-serif | Use `font-family: Inter, -apple-system, Helvetica, Arial, sans-serif` — graceful degradation |
+| SMIL `<animate>` support | Works on github.com (tested). Does NOT animate in GitHub mobile app — static fallback is fine | Accent bar is visible even without animation |
+| Snake SVG broken until first Action run | Broken image for ~2 min after initial push | Trigger workflow_dispatch immediately after push |
+| GraphQL contributions query needs token | Returns 0 without auth | Default `GITHUB_TOKEN` in Actions has read access to own contributions |
+| Mobile rendering of wide SVG | Hero may be small on phones | Set `width="100%"` + `viewBox` — SVG scales responsively |
+| Dark/light `<picture>` element | Requires viewer's browser to support `prefers-color-scheme` media query | Fallback `<img>` shows dark variant (majority of GitHub users use dark mode) |
+
+---
+
+### >>> This is the FINAL synthesized direction. Not A, B, C, D, E, or F — it's "Forge": the best atomic tricks assembled into one cohesive profile.
