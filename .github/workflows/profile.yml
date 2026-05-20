@@ -1,0 +1,60 @@
+name: Profile
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  hero:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Generate hero SVGs
+        working-directory: generator
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: kroch228
+          DISPLAY_NAME: Alexander
+        run: node index.js
+      - name: Commit hero
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/
+          if ! git diff --cached --quiet; then
+            git commit -m "update hero SVGs [skip ci]"
+            git push
+          fi
+
+  snake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: kroch228
+          outputs: |
+            assets/snake-dark.svg?palette=github-dark
+            assets/snake-light.svg?palette=github
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: repo
+      - name: Commit snake
+        run: |
+          cp assets/snake-dark.svg repo/assets/snake-dark.svg
+          cp assets/snake-light.svg repo/assets/snake-light.svg
+          cd repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/snake-dark.svg assets/snake-light.svg
+          if ! git diff --cached --quiet; then
+            git commit -m "update snake SVGs [skip ci]"
+            git push
+          fi
