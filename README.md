@@ -78,12 +78,12 @@ I ask questions first, then write code. No guessing, no scope creep.
 ## GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=camer&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" height="170" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=camer&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="170" />
+  <img src="https://github-readme-stats.vercel.app/api?username=kroch228&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" height="170" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kroch228&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="170" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=camer&theme=tokyonight&hide_border=true" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kroch228&theme=tokyonight&hide_border=true" />
 </p>
 
 ---
@@ -91,7 +91,7 @@ I ask questions first, then write code. No guessing, no scope creep.
 ## Trophies
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=camer&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&row=1" />
+  <img src="https://github-profile-trophy.vercel.app/?username=kroch228&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&row=1" />
 </p>
 
 ---
@@ -99,7 +99,7 @@ I ask questions first, then write code. No guessing, no scope creep.
 ## Activity Graph
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=camer&theme=tokyo-night&hide_border=true&area=true" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=kroch228&theme=tokyo-night&hide_border=true&area=true" />
 </p>
 
 ---
@@ -108,9 +108,9 @@ I ask questions first, then write code. No guessing, no scope creep.
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/camer/camer/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/camer/camer/output/github-snake.svg" />
-    <img alt="Snake animation" src="https://raw.githubusercontent.com/camer/camer/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kroch228/kroch228/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kroch228/kroch228/output/github-snake.svg" />
+    <img alt="Snake animation" src="https://raw.githubusercontent.com/kroch228/kroch228/output/github-snake-dark.svg" />
   </picture>
 </p>
 
@@ -126,5 +126,5 @@ I ask questions first, then write code. No guessing, no scope creep.
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=camer&style=flat-square&color=7aa2f7" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=kroch228&style=flat-square&color=7aa2f7" alt="Profile views" />
 </p>
